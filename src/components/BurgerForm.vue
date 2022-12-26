@@ -10,7 +10,7 @@
                 <label for="pao">Escolha o pão:</label>
                 <select name="pao" id="pao" class="pao" v-model="pao">
                     <option value="">Selecione seu pão</option>
-                    <option value="integral">Integral</option>
+                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{pao.tipo}}</option>
                 </select>
             </div>
             <div class="input-container">
@@ -37,6 +37,39 @@
 <script>
 export default {
     name: 'BurgerForm',
+
+    data() {
+        return {
+            paes: null,
+            carnes: null,
+            opcionaisdata: null,
+            nome: null,
+            pao: null,
+            carne: null,
+            opcionais: [],
+            status: 'solicitado',
+            msg: null,
+        }
+    },
+
+    methods: {
+        async getIngredientes(){
+            const req = await fetch("http://localhost:3000/ingredientes")
+            const data = await req.json()
+
+            console.log(data)
+
+            this.paes = data.paes
+            this.carnes = data.carnes
+            this.opcionaisdata = data.opcionais
+        }
+    },
+
+    //LifeCycleHooks (quando o componente for montado)
+    mounted() {
+        this.getIngredientes()
+    }
+
 }
 </script>
 
