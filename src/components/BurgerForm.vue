@@ -30,14 +30,13 @@
             <div class="input-container">
                 <input type="submit" class="submit-btn" value="Criar meu Burger">
             </div>
-            
         </form>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'BurgerForm'
+    name: 'BurgerForm',
 }
 </script>
 

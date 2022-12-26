@@ -26,8 +26,6 @@
         app_name: 'Hamburgueria',
       }
     }
-
-
   }
 </script>
 
