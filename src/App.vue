@@ -1,30 +1,53 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+
+  <!-- todos os componentes que se repetem (Nav, Footer) ficam aqui em App.vue-->
+  <Navbar :logo="logo_source" :alt="app_name"/>
+
+  <!-- a view é impressa nesta tag <router-view>, que são os componentes que estão dentro do direitório views -->
   <router-view/>
+
+  <!-- todos os componentes que se repetem (Nav, Footer) ficam aqui em App.vue-->
+  <Footer/>
 </template>
 
+<script>
+  import Navbar from '@/components/Navbar.vue';
+  import Footer from '@/components/Footer.vue';
+
+  export default {
+    components: {
+      Navbar,
+      Footer,
+    },
+
+    data() {
+      return {
+        logo_source: '/img/logo.png',
+        app_name: 'Hamburgueria',
+      }
+    }
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+.main-container {
+  margin: 50px;
+  min-height: 500px;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #222;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
