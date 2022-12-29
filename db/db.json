@@ -87,7 +87,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Finalizado",
+      "status": "Solicitado",
       "id": 1
     },
     {
@@ -99,6 +99,30 @@
         "Cebola roxa"
       ],
       "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Jurandir",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa"
+      ],
+      "status": "Em produção",
+      "id": 3
+    },
+    {
+      "nome": "Maria",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Cheddar",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "solicitado",
       "id": 4
     }
   ]
