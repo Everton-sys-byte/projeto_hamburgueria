@@ -80,4 +80,48 @@
     "burgers": [
       
     ]
+<<<<<<< Updated upstream
   }
+=======
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "burgers": [
+    {
+      "nome": "Everton",
+      "carne": "Maminha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Julio",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame",
+        "Tomate"
+      ],
+      "status": "solicitado",
+      "id": 2
+    }
+  ]
+}
+>>>>>>> Stashed changes
